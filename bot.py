@@ -14,4 +14,8 @@ ascii = """
 
 bot = commands.Bot(command_prefix="octo", intents=discord.Intents.all())
 
+@bot.event
+async def on_ready():
+    print(ascii)
+
 bot.run(get_env("TOKEN"))
